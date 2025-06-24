@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - Solaris Bank</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KGN Bank - Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="login-screen">
-    <h1 class="logo">☀️ Solaris Bank</h1>
-    <h2>Área do Cliente</h2>
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Senha" />
-    <button onclick="login()">Entrar</button>
-    <p id="error" class="error"></p>
+  <div class="login-container">
+    <img src="logo-kgn.png" alt="KGN Bank" class="logo-img">
+    <h2>Bem-vindo ao KGN Bank</h2>
+    <form onsubmit="entrar(event)">
+      <input type="text" placeholder="Usuário" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
   </div>
 
-  <div id="dashboard" style="display: none;">
-    <h1 class="logo">☀️ Solaris Bank</h1>
-    <h2>Bem-vindo, cliente!</h2>
-    <p>Saldo disponível: <strong>R$ 2.530,00</strong></p>
-    <p>Limite de crédito: <strong>R$ 300,00</strong></p>
-    <button onclick="irParaInvestimentos()">Ver Investimentos</button>
-    <button onclick="logout()">Sair</button>
-  </div>
-
-  <div id="investimentos" style="display: none;">
-    <h1 class="logo">☀️ Solaris Bank</h1>
-    <h2>Área de Investimentos</h2>
-    <ul>
-      <li>CDB 110% CDI - R$ 5.000</li>
-      <li>Tesouro IPCA+ 2029 - R$ 2.000</li>
-    </ul>
-    <button onclick="voltarPainel()">Voltar ao Painel</button>
-  </div>
-
-  <script src="script.js"></script>
+  <script>
+    function entrar(event) {
+      event.preventDefault();
+      window.location.href = "painel.html";
+    }
+  </script>
 </body>
 </html>
