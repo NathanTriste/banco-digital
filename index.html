@@ -1,27 +1,20 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KGN Bank - Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-container">
-    <img src="logo-kgn.png" alt="KGN Bank" class="logo-img">
+    <img src="logo-kgn.png" alt="Logo KGN" class="logo">
     <h2>Bem-vindo ao KGN Bank</h2>
-    <form onsubmit="entrar(event)">
-      <input type="text" placeholder="Usuário" required>
-      <input type="password" placeholder="Senha" required>
-      <button type="submit">Entrar</button>
-    </form>
+    <input type="text" id="usuario" placeholder="Usuário" />
+    <input type="password" id="senha" placeholder="Senha" />
+    <button onclick="logar()">Entrar</button>
   </div>
-
-  <script>
-    function entrar(event) {
-      event.preventDefault();
-      window.location.href = "painel.html";
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

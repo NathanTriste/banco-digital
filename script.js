@@ -1,29 +1,11 @@
-function login() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const error = document.getElementById('error');
+function logar() {
+  const usuario = document.getElementById("usuario").value;
+  const senha = document.getElementById("senha").value;
 
-  if (email === "cliente@solaris.com" && password === "1234") {
-    document.getElementById("login-screen").style.display = "none";
-    document.getElementById("dashboard").style.display = "block";
-    error.textContent = "";
+  // Qualquer entrada é aceita
+  if (usuario && senha) {
+    window.location.href = "painel.html";
   } else {
-    error.textContent = "Email ou senha incorretos!";
+    alert("Por favor, preencha todos os campos.");
   }
-}
-
-function logout() {
-  document.getElementById("dashboard").style.display = "none";
-  document.getElementById("investimentos").style.display = "none";
-  document.getElementById("login-screen").style.display = "block";
-}
-
-function irParaInvestimentos() {
-  document.getElementById("dashboard").style.display = "none";
-  document.getElementById("investimentos").style.display = "block";
-}
-
-function voltarPainel() {
-  document.getElementById("investimentos").style.display = "none";
-  document.getElementById("dashboard").style.display = "block";
 }

@@ -1,28 +1,25 @@
+<!-- painel.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel - KGN Bank</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="painel">
-    <img src="logo-kgn.png" alt="KGN Bank" class="logo-img">
-    <h2>Olá, cliente!</h2>
-    <p>Bem-vindo ao seu painel no KGN Bank.</p>
-    <ul>
-      <li>Saldo: R$ 8.750,00</li>
-      <li>Conta: 123456-7</li>
-      <li>Agência: 0001</li>
-    </ul>
-    <button onclick="sair()">Sair</button>
+  <div class="painel-container">
+    <img src="logo-kgn.png" alt="Logo KGN" class="logo pequeno">
+    <h1>Bem-vindo ao seu Painel, Cliente KGN</h1>
+    <h2>Saldo disponível: R$ 12.450,87</h2>
+    <div class="botoes">
+      <button onclick="alert('Simulação de empréstimo')">Solicitar Empréstimo</button>
+      <button onclick="alert('Área de PIX')">Fazer PIX</button>
+      <button onclick="alert('Seus cartões')">Ver Cartões</button>
+      <button onclick="alert('Área de Investimentos')">Investir</button>
+      <button onclick="alert('Histórico de transações')">Ver Extrato</button>
+      <button onclick="window.location.href='index.html'">Sair</button>
+    </div>
   </div>
-
-  <script>
-    function sair() {
-      window.location.href = "index.html";
-    }
-  </script>
 </body>
 </html>
